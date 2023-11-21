@@ -1,0 +1,141 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Website</title>
+    <style>
+        body {
+            background-color: #ecf0f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #3498db, #2980b9);
+        }
+
+        #animated-line {
+            background-color: #bc531a;
+            height: 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            animation: moveLines 2 infinite;
+        }
+
+        @keyframes moveLine {
+            0% {
+                left: 0;
+                width: 0;
+            }
+            25% {
+                width: 25%;
+            }
+            50% {
+                width: 50%;
+            }
+            75% {
+                width: 75%;
+            }
+            100% {
+                left: 100%;
+                width: 0;
+            }
+        }
+
+
+
+        #page-content {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            padding: 20px;
+            max-width: 600px;
+            width: 80%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        #welcome-message {
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Added styles to change the color of names to black */
+        #page-content h1,
+        #page-content p {
+            color: #000;
+        }
+        .aboutAtm{
+            display: block;
+            border: 6px solid cyan;
+            border-radius: 10px;
+            text-indent: 4px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 30px;
+
+            color: black;
+            
+        }
+        .Complain{
+            display: block;
+            margin: 10px;
+            border: 6px solid cyan;
+            border-radius: 10px;
+            text-indent: 4px;
+            font-weight: bold;
+            font-size: 30px;
+
+
+
+            
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="animated-line"></div>
+
+
+<div id="page-content">
+    <h1>Welcome to the ATM Website</h1>
+    <p id="welcome-message">Explore the future of banking with <span style="color: #000;">Aaditya Nanda</span> and <span style="color: #000;">Palak</span></p>
+    <!-- Content of the pages will be loaded here -->
+</div>
+
+<div>
+    <a href="about_atm2.html" class="aboutAtm">About ATM</a>
+    <a href="site_query.html" class="Complain">Complain</a>
+</div>
+
+</body>
+</html>

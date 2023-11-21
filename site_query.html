@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Query</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #query-window {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        marquee {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="query-window">
+    <h2>ATM Query</h2>
+    <p>If you are facing issues with the ATM, feel free to contact us:</p>
+    <p>Email: <strong><span id="random-email">loading...</span></strong></p>
+    <img src="valo sky dogg.jpg" alt="Space Image">
+
+    <marquee behavior="scroll" direction="left">
+        Welcome to ATM Query! Contact Aaditya Nanda or Palak for assistance.
+    </marquee>
+</div>
+
+<script>
+    // Generate a random email for contact
+    function generateRandomEmail() {
+        var emailDomains = ['gmail.com', 'yahoo.com', 'outlook.com', 'example.com'];
+        var randomDomain = emailDomains[Math.floor(Math.random() * emailDomains.length)];
+        return 'query_' + Math.floor(Math.random() * 1000) + '@' + randomDomain;
+    }
+
+    // Display the random email
+    document.getElementById('random-email').textContent = generateRandomEmail();
+</script>
+
+</body>
+</html>
